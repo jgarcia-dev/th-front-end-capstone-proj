@@ -88,38 +88,36 @@ header {
     border-radius: 0 0 40px 40px;
 }
 
-/* main navigation */
-/* ============================================= */
-nav {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    padding: 20px 20px;
+/* navigation - mobile  */
+/* ==================================================*/
+.nav-bar {
+    position: relative;
 }
 
-.site-name {
+.site-link {
+    display: inline-block;
     letter-spacing: 0.05rem;
     color: #fff;
-    margin-right: auto;
+    text-decoration: none;
+    padding: 20px;
+    position: relative;
     z-index: 2;
-    -webkit-transition: color 0.3s ease;
-    -o-transition: color 0.3s ease;
-    transition: color 0.3s ease;
 }
 
 .dark {
     color: #000;
 }
 
-.dynamic-nav-links-container {
+.nav-bar-links {
     position: absolute;
     top: 0;
     right: 0;
     height: 100vh;
     width: 100%;
+    overflow-y: scroll;
+    background-color: #fff;
+    padding-top: 50px;
+
     list-style-type: none;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -131,8 +129,6 @@ nav {
     -webkit-box-align: end;
         -ms-flex-align: end;
             align-items: flex-end;
-    background-color: #fff;
-    padding-top: 80px;
     -webkit-transition: -webkit-transform 0.3s ease;
     transition: -webkit-transform 0.3s ease;
     -o-transition: transform 0.3s ease;
@@ -143,18 +139,24 @@ nav {
             transform: translateX(100%);
 }
 
-.nav-active {
-    -webkit-transform: translateX(0);
-        -ms-transform: translateX(0);
-            transform: translateX(0);
+.nav-bar-links li {
+    padding: 20px 60px 20px;
 }
 
-.dynamic-nav-links-container li {
-    padding: 20px 40px 20px;
+.nav-bar-links a {
+    text-decoration: none;
+    color: #0C72C1;
+}
+
+.nav-bar-links svg {
+    display: block;
+    width: 20px;
+    height: 20px;
 }
 
 .hamburger-btn {
     position: absolute;
+    top: 20px;
     right: 20px;
     cursor: pointer;
 }
@@ -191,16 +193,14 @@ nav {
     background-color: #000;
 }
 
-
-nav a {
-    color: #0C72C1;
-    text-decoration: none;
+.show-nav-bar-links {
+    -webkit-transform: translateX(0);
+        -ms-transform: translateX(0);
+            transform: translateX(0);
 }
 
-nav svg {
-    display: block;
-    width: 20px;
-    height: 20px;
+.suppress-y-scroll {
+    overflow-y: hidden;
 }
 
 
@@ -584,14 +584,23 @@ footer a {
 
 
 @media (min-width: 1024px) {
-    /* main navigation */
-    /* ============================================= */
-    nav {
-        padding: 0 20px;
+    /* navigation -desktop  */
+    /* ==================================================*/
+    .site-link {
+        color: #fff;
     }
 
-    .dynamic-nav-links-container {
-        /* navigation reset */
+    .nav-bar {
+        padding: 0 20px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+    }
+
+    .nav-bar-links {
         position: static;
         width: auto;
         height: auto;
@@ -599,6 +608,8 @@ footer a {
         -webkit-transform: translateX(0);
             -ms-transform: translateX(0);
                 transform: translateX(0);
+        overflow-y: hidden;
+        background-color: transparent;
 
         -webkit-box-orient: horizontal;
 
@@ -610,28 +621,29 @@ footer a {
         -webkit-box-align: center;
             -ms-flex-align: center;
                 align-items: center;
+        margin-left: auto;
         background-color: rgba(255, 255, 255, 0.08);
         border-radius: 0 0 40px 40px;
         padding: 16px 40px;
     }
 
-    .dynamic-nav-links-container li {
+    .nav-bar-links li {
         padding: 0 14px;
     }
 
-    nav a {
+    .nav-bar-links a {
         display: inline-block;
         color: #fff;
         padding: 9px 12px;
     }
 
-    nav a:hover {
-        background-color: rgba(42, 42, 115, 0.17);
-        border-radius: 20px;
+    .nav-bar-links svg {
+        fill: #fff;
     }
 
-    nav svg {
-        fill: #fff;
+    .nav-bar-links a:hover {
+        background-color: rgba(42, 42, 115, 0.17);
+        border-radius: 20px;
     }
 
     .hamburger-btn {
