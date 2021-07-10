@@ -1,12 +1,12 @@
 // Mobile Navigation
 const hamburgerBtn = document.querySelector('.hamburger-btn');
-const dynamicNavLinks = document.querySelector('.dynamic-nav-links-container');
-const siteName = document.querySelector('.site-name');
+const siteLink = document.querySelector('.site-link');
+const navBarLinks = document.querySelector('.nav-bar-links');
 const body = document.querySelector('body');
 
 hamburgerBtn.addEventListener('click', ()=> {
-    dynamicNavLinks.classList.toggle('nav-active');
+    siteLink.classList.toggle('dark');
+    navBarLinks.classList.toggle('show-nav-bar-links');
     hamburgerBtn.classList.toggle('x');
-    siteName.classList.toggle('dark');
-    body.classList.toggle('overflow-y-hidden');
+    body.classList.toggle('suppress-y-scroll');
 });
