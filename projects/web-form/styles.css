@@ -1,0 +1,213 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Merriweather", serif;
+    line-height: 1.3; 
+    background-color: #dfe6e6;
+}
+
+
+/* ==================================================================== 
+Container Styles
+=======================================================================*/
+
+form {
+    padding: 0 20px;
+    background-color: rgb(195, 221, 221);
+}
+
+.header {
+    border-bottom: 4px solid #2d3945;
+    padding: 30px 0;
+    margin-bottom: 2px;
+    text-align: center;
+}
+
+fieldset {
+    padding: 25px 0;
+    border: 2px solid #2d3945;
+    border-style: solid none none;
+}
+
+/* flex-container */
+.row {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.choice-group {
+    margin-bottom: 20px;
+}
+
+
+/* ==================================================================== 
+Heading and label Styles
+=======================================================================*/
+
+.site-name {
+    background-color:#2d3945;
+    padding: 20px;
+    font-size: 1.6em;
+    text-transform: uppercase;
+    text-align: center;
+    color: #fff;
+}
+
+h2 {
+    color:#2d3945;
+    margin-bottom: 10px;
+    font-size: 1.4em;
+}
+
+.clear {
+    clear:both;
+}
+
+legend {
+    color:#2d3945;
+    font-size: 1.3em;
+    font-weight: bold;
+    float: left;
+    margin-bottom: 25px;
+}
+
+p {
+    color: #8a8f94;
+    margin-bottom: 15px;
+}
+
+label {
+    margin-bottom: 10px;
+    color: #75797e;
+}
+
+.choice-label {
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+.copyright {
+    text-align: center;
+    font-style: italic;
+    font-size: 0.7em;
+    padding-bottom: 40px;
+}
+
+
+/* ==================================================================== 
+Form Input Styles
+=======================================================================*/
+
+/* make form input fonts more consistent */
+button, input, select, textarea {
+    font-family: inherit;
+    font-size: 100%;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select {
+    width: 100%;
+    height: 50px;
+    padding: 0 20px;
+    background-color: #eff0f1;
+    color: #9ba1a7;
+    border-radius: 5px;
+    border: none;
+    transition: background-color 1s;
+}
+
+input::placeholder {
+    font-size: .89em;
+    text-align: right;
+    font-style: italic;
+    padding-right: 10px;
+    color: #9ba1a7;
+}
+
+.narrow {
+    max-width: 50%;
+}
+
+input:focus,
+select:focus {
+    outline-color: #788087;
+    background-color: #ecdfcf;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+    margin: 0 5px;
+}
+
+textarea {
+    width: 100%;
+    padding: 20px;
+    margin-top: 20px;
+    background-color: #eff0f1;
+    border-radius: 5px;
+    border: none;
+    color: #8a8f94;
+    transition: background-color 1s;
+}
+
+textarea:focus {
+    outline-color: #788087;
+}
+
+button {
+    width: 100%;
+    padding: 15px 0;
+    text-align: center;
+    font-size: 1.3em;
+    font-weight: bold;
+    background-color: #4ebbb5;
+    border-radius: 5px;
+    border: none;
+    color: #fff;
+    margin-bottom: 30px;
+    transition: background-color 300ms;
+}
+
+button:hover,
+button:focus {
+    cursor: pointer;
+    background-color: #ecdfcf;
+    border: 2px solid #788087;
+    outline-color: #788087;
+    color: #72777c;
+}
+
+
+/* ==================================================================== 
+Media Queries
+=======================================================================*/
+
+@media (min-width: 768px) {
+    form {
+        width: 600px;
+        margin: auto;
+    }
+
+    .row {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .row label {
+        min-width: 30%;
+        margin: 0;
+    }
+
+    .narrow {
+        max-width: 30%;
+    }
+}

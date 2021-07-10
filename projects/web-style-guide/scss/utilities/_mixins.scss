@@ -1,0 +1,10 @@
+/* ============================================= */
+/*              Mixins                        */
+/* ============================================= */
+
+// Buttons on hover -------------------------------
+@mixin lightness-change($original-color) {
+    cursor: pointer;
+    background-color: lighten($original-color, 15%);
+    transition: background-color 300ms;
+}
