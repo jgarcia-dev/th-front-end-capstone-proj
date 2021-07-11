@@ -200,6 +200,7 @@ header {
 }
 
 .suppress-y-scroll {
+    position: relative;
     overflow-y: hidden;
 }
 
