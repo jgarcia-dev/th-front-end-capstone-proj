@@ -20,9 +20,12 @@ body {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    min-height: 100vh;
-    position: relative;
+    height: 100vh;
     overflow-x: hidden;
+}
+
+.suppress-y-scroll {
+    overflow-y: hidden;
 }
 
 /* for sticky footer */
@@ -140,7 +143,7 @@ header {
 }
 
 .nav-bar-links li {
-    padding: 20px 60px 20px;
+    padding: 20px 80px 20px;
 }
 
 .nav-bar-links a {
@@ -197,11 +200,6 @@ header {
     -webkit-transform: translateX(0);
         -ms-transform: translateX(0);
             transform: translateX(0);
-}
-
-.suppress-y-scroll {
-    position: relative;
-    overflow-y: hidden;
 }
 
 
