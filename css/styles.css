@@ -334,9 +334,12 @@ header {
     margin-bottom: 1.5rem;
 }
 
-.proj-card__btn:hover {
-    background-color: #DFEEFF;
-    border-color: #0C72C1;
+/* sticky hover fix for touch screens */
+@media (hover: hover) {
+    .proj-card__btn:hover {
+        background-color: #DFEEFF;
+        border-color: #0C72C1;
+    }
 }
 
 /* about me card specific styles */
