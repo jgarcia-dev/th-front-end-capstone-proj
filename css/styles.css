@@ -586,6 +586,10 @@ footer a {
 
 
 @media (min-width: 1024px) {
+    .site-wrap {
+        overflow-x: initial;
+    }
+
     /* navigation -desktop  */
     /* ==================================================*/
     .site-link {
