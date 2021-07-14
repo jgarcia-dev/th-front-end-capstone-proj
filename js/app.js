@@ -3,7 +3,7 @@ const treeHouseProjectsData = [
     {
         id: "th-fewd-tg-08",
         name: "Employee Directory",
-        description: "An employee directory that uses fetch to request employee data from an API and parses it to display specific employee data on the web page.",
+        description: "An employee directory that uses fetch to request employee data from an API and parses it to display specific employee data on the web page. Employees can be filtered via a search bar. Clicking on an employee will open a modal window with more employee information.",
         imgSml: "employee-directory-sg-v01.jpg",
         imgAlt: "Employee directory thumbnail",
         path: "employee-directory/index.html",
@@ -21,7 +21,7 @@ const treeHouseProjectsData = [
     {
         id: "th-fewd-tg-06",
         name: "Game Show App",
-        description: "A word guessing game where players click on letters trying to guess a random phrase.",
+        description: "A quote guessing game where players click on letters trying to guess a random quote from a film.",
         imgSml: "word-guess-game-sg-01.jpg",
         imgAlt: "Word game thumbnail",
         path: "word-game/index.html",
@@ -30,7 +30,7 @@ const treeHouseProjectsData = [
     {
         id: "th-fewd-tg-05",
         name: "Interactive Gallery",
-        description: "An interactive photo gallery layout out with CSS Grid. Allows users to search for photos based on their captions.",
+        description: "An interactive photo gallery layout that uses CSS Grid. Allows users to search for photos based on their captions.",
         imgSml: "interactive-gallery-sg-01.jpg",
         imgAlt: "Interactive gallery thumbnail",
         path: "interactive-gallery/index.html",
