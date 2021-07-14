@@ -11,6 +11,7 @@
   --color-neutral-light: #D2D2D2;
   --color-keys: #37474F;
   --color-keys-light: #E5E5E5;
+  --font-size-small: 40px;
   --font-size-large: 60px;
   --font-size-medium: 20px;
   --transition: all .2s ease-in-out;
@@ -38,14 +39,14 @@ h2 {
   margin: 0;
   text-transform: uppercase;
   font-family: 'Open Sans', sans-serif;
-  font-size: var(--font-size-large);
+  font-size: var(--font-size-small);
   margin: 0;
 }
 
 button {
   margin: 6px;
   border: 1px solid transparent;
-  padding: .5rem 1rem;
+  padding: .1rem .32rem;
   color: var(--color-keys);
   font-size: var(--font-size-medium);
   background-color: var(--color-keys-light);
@@ -77,12 +78,16 @@ button {
 
 /* Phrase */
 
+.word {
+  margin: 15px;
+}
+
 .letter {
   font-family: 'Open Sans', sans-serif;
   font-size: var(--font-size-medium);
-  height: 65px;
-  width: 65px;
-  padding: 20px 1px 0 1px;
+  height: 35px;
+  width: 35px;
+  padding: 5px 1px 0 1px;
   margin-right: 2px;
   color: transparent;
   background: var(--color-neutral-light);
@@ -166,4 +171,33 @@ button {
 
 .lose a {
   color: var(--color-lose);
+}
+
+.tries img {
+  width: 25px;
+  height: auto;
+}
+
+@media (min-width: 580px) {
+
+  h2 {
+    font-size: var(--font-size-large);
+  }
+
+  .letter {
+    height: 65px;
+    width: 65px;
+    padding: 20px 1px 0 1px;
+    margin-right: 2px;
+  }
+
+  button {
+    padding: .5rem 1rem;
+  }
+  
+  .tries img {
+    width: 35px;
+    height: 30px;
+  }
+
 }

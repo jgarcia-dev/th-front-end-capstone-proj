@@ -11,24 +11,28 @@ const getRandomPhraseAsArray = arr => {
     return phrases[randIndex];
 }
 
-// adds the allLetters of a string to the display
-const addPhraseToDisplay = arr => {
-    for (let i = 0; i < arr.length; i += 1) {
-        const currChar = arr[i];
-        const li = document.createElement('li');
-        li.textContent = currChar;
-        if (currChar != ' ') {
-            li.className = 'letter';
-        } else if (currChar === ' ') {
-            li.className = 'space';
+//adds the allLetters of a string to the display
+const addPhraseToDisplay = string => {
+    const words = string.split(' ');
+    
+    words.forEach( word => {
+        const wordUL = document.createElement('ul');
+        wordUL.className = 'word';
+        
+        for (let i = 0; i < word.length; i++) {
+            const letterLi = document.createElement('li');
+            letterLi.innerText = word[i];
+            letterLi.className = 'letter'
+            wordUL.appendChild(letterLi);
         }
-        phraseUL.appendChild(li);
-    }
+        phraseUL.appendChild(wordUL);
+    });
+
 }
 
 // check if a letter is in the phrase
 const checkLetter = button => {
-    const letterLIs = phraseUL.children;
+    const letterLIs = phraseUL.getElementsByTagName('li');
     let match = null;
     for (let i = 0; i < letterLIs.length; i += 1) {
         const li = letterLIs[i];
