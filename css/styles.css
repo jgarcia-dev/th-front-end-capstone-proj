@@ -359,6 +359,46 @@ header {
     margin-bottom: 2rem;
 }
 
+.about-me-card p:last-of-type {
+    margin-bottom: 5rem;
+} 
+
+.skills-container {
+    text-align: center;
+    margin-bottom: 5rem;
+}
+
+.skill-lbl {
+    font-size: 0.9rem;
+    color: #757575;
+    line-height: 2rem;
+    font-weight: 600;
+    border: 1px solid #969696;
+    border-radius: 50px;
+    padding: 3px 10px;
+    margin: 0 2px;
+    white-space: nowrap
+}
+
+.edu-row {
+    text-align: center;
+    margin-bottom: 2.7rem;
+}
+
+.accomplishment {
+    font-size: 0.875rem;
+    font-weight: 600;
+    margin-bottom: 0.3rem;
+    text-align: center;
+}
+
+.edu-source {
+    font-size: 0.85rem;
+    color: #757575;
+    font-style: italic;
+    text-align: center;
+}
+
 /* contact-card-a and contact-card-b specific styles */
 .contact-card-a,
 .contact-card-b {
@@ -564,6 +604,12 @@ footer a {
         padding-right: 60px;
     }
 
+
+    .accomplishment,
+    .edu-source {
+        font-size: 1rem;
+    }
+
     .ftr-links-row {
         -webkit-box-orient: horizontal;
         -webkit-box-direction: normal;
@@ -757,6 +803,16 @@ footer a {
 
     .about-me-card__heading {
         font-size: 2.7rem;
+    }
+
+    .skills-container {
+        text-align: left;
+    }
+
+    .edu-row,
+    .accomplishment,
+    .edu-source {
+        text-align: left;
     }
 
     .contact-card-b__row {
